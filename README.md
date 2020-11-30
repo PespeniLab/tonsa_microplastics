@@ -4,9 +4,10 @@
 
 ## Scripts and Analysis
  Below are the scripts used for the complete analysis for the manuscript
- * Fecal Matter Analysis [Fecal_Analysis.R]
- * Fecundity and Survival Data [Fecundity_Analysis.R]
- * Early life Stage (Nauplii) Analysis [Nauplii_Analysis.R]
+ * Fecal Matter Analysis `[Fecal_Analysis.R]`
+ * Fecundity and Survival Data `[Fecundity_Analysis.R]`
+ * Early life Stage (Nauplii) Analysis `[Nauplii_Analysis.R]`
  * Net Reproductive Growth Analysis
 
 ## Figures
+
