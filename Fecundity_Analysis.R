@@ -2,13 +2,13 @@
 #############################################################################################################
 ######################################Fecundity and Egg Data Analysis########################################
 
-install.packages("devtools")
-install.packages("car")
-install.packages("carData")
-install.packages("magrittr")
-install.packages("rlang")
-install.packages("nlme")
-install.packages("lmerTest")
+#install.packages("devtools")
+#install.packages("car")
+#install.packages("carData")
+#install.packages("magrittr")
+#install.packages("rlang")
+#install.packages("nlme")
+#install.packages("lmerTest")
 
 library(patchwork)
 library(magrittr)
