@@ -23,6 +23,8 @@ library(dplyr)
 library(knitr)
 library(lme4)
 
+png("fecundity.png", height=4, width=11, units="in", res=300)
+
 #Setting uniform colors of the figures 
 colors <- c("azure4", "white")
 
@@ -37,9 +39,13 @@ datt <- data
 head(datt)
 
 g1 <- ggplot(data=datt,mapping=aes(x=Treatment,y=Fecundity)) + 
-  geom_boxplot() + geom_boxplot(fill=colors) + theme_bw(base_size = 14) + 
+  geom_boxplot(fill=colors, outlier.size=2.6) +
+  theme_bw(base_size = 22) + 
   ylab(expression("Fecundity" ~ (48 ~ hr^{-1}))) + xlab("Treatment") + 
-  theme(panel.grid.major = element_blank(), axis.title.x=element_blank(), panel.grid.minor = element_blank())
+  theme(panel.grid.major = element_blank(), axis.title.x=element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  labs(tag = "B") +
+  theme(plot.tag = element_text(vjust = 2))
 
 g1
 
@@ -81,8 +87,12 @@ head(dat)
 
 #Getting to the plot
 g2 <- ggplot(data=dat, mapping=aes(x=Treatment,y=survival)) + geom_boxplot() + 
-  geom_boxplot(fill=colors) + theme_bw(base_size = 14) + ylab("Survival (%)") + 
-  theme(panel.grid.major = element_blank(), axis.title.x=element_blank(), panel.grid.minor = element_blank())
+  geom_boxplot(fill=colors, outlier.size=2.6) +
+  theme_bw(base_size = 22) + ylab("Survival (%)") + 
+  theme(panel.grid.major = element_blank(), axis.title.x=element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  labs(tag = "A") +
+  theme(plot.tag = element_text(vjust = 2))
 
 g2
 
@@ -96,22 +106,15 @@ data <- read.table("diameter.csv", header= TRUE, sep=",")
 dat <- data
 head(dat)
 
-##To get significance asterisks uniformly displayed in all plots
-
-#The maximum value for each data frame was divided by a uniform value, 10, to display the asterisks 
-#the same distance away from each outlier or whiskers
-starsspacing <-18
-
-off <- max(dat$diameter)/starsspacing
-starsheight <-max(dat[dat[,"Treatment"]=="Plastic",]$diameter)
-starsheight + off
-
 #Getting to the plot
 g3 <- ggplot(data=dat, mapping=aes(x=Treatment, y=diameter)) + geom_boxplot() + 
-  geom_boxplot(fill=colors) + theme_bw(base_size = 14) + xlab("Treatment") + 
+  geom_boxplot(fill=colors, outlier.size=2.6) + 
+  theme_bw(base_size = 22) + xlab("Treatment") + 
   ylab (expression(paste("Egg Diameter (",mu, m,")", sep=""))) + geom_boxplot(fill=colors) + 
   theme(panel.grid.major = element_blank(), axis.title.x=element_blank(), panel.grid.minor = element_blank()) +
-  geom_text(y=starsheight[1]+off,x=2,size=7, label = "***") + ylim(58,90)
+  geom_text(y=85,x=2,size=10, label = "***") + ylim(58,90) +
+  labs(tag = "C") +
+  theme(plot.tag = element_text(vjust = 2))
 
 g3
 
@@ -132,6 +135,6 @@ Anova(design)
 ## Stitching all the figures together for the final plot
 g2+g1+g3
 
-
+dev.off()
 
 
