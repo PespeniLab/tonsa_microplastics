@@ -1,6 +1,6 @@
-# The Effects of Microplastcs on Acartia tonsa
+# The Effects of Microplastcs on _Acartia tonsa_
 
- This repository holds the code for the analysis of a series of microplastic exposures to the marine copepod Acartia tonsa 
+ This repository holds the code for the analysis of a series of microplastic exposures to the marine copepod _Acartia tonsa_
 
 ## Scripts and Analysis
  
