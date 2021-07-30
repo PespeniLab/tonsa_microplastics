@@ -15,4 +15,4 @@
 
 Below are the scripts used to create the figures in the manuscript
 
-Figure 2: `[Nauplii_Analysis.R]` ; Figure 3: `[Fecundity_Analysis.R]` ; Figrue 4: *** ; Figure 5: `[Fecal_Analysis.R]`
+Figure 2: `[Nauplii_Analysis.R]` ; Figure 3: `[Fecundity_Analysis.R]` ; Figrue 4: `[lambda_calculation.R]` ; Figure 5: `[Fecal_Analysis.R]`
