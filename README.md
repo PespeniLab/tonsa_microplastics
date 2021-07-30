@@ -9,7 +9,7 @@
  * Fecal Matter Analysis `[Fecal_Analysis.R]`
  * Fecundity and Survival Data `[Fecundity_Analysis.R]`
  * Early life Stage (Nauplii) Analysis `[Nauplii_Analysis.R]`
- * Net Reproductive Growth Analysis
+ * Net Reproductive Growth Analysis `[lambda_calculation.R]`
 
 ## Figures
 
